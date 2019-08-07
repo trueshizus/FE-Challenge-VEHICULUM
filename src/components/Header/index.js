@@ -1,18 +1,14 @@
 import React from "react";
-import { Link } from "@reach/router";
+import Search from "../Search";
+import Menu from "../Menu";
 
 function Header() {
   return (
     <header>
-      Header
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="jokes/:1"> A Joke</Link>
-        <Link to="jokes/new">New Joke</Link>
-        <Link to="jokes/mine">My Jokes</Link>
-        <Link to="jokes/saved">Saved Jokes</Link>
-        <Link to="/me">Me</Link>
-      </nav>
+      <Menu />
+      <h1>The Joke Bible</h1>
+      <h2>Daily Laughs for you and yours</h2>
+      <Search />
     </header>
   );
 }
