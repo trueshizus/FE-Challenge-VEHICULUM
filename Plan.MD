@@ -1,5 +1,7 @@
 # Plan
 
+## General Steps
+
 1) Migrate all Jokes to firestore adding the fields createdAt, Upvotes, Downvotes and Author.
 
 2) Create a basic list of links with no functionality for each of the sections and add a Route to them:
@@ -29,3 +31,7 @@ Acount Information.
 5) Work in each section to achieve the desired functionality.
 6) Add user authentication, login, logout, and favorites.
 7) Add styling to each component and the main layout.
+
+## Questions
+
+* Where does the Joke titles come from?
