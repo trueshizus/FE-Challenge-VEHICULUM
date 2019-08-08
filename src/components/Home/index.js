@@ -4,25 +4,30 @@ import useFirebaseCollection from "../../firebase/useFirebaseCollection";
 
 function Home() {
   const [activeFilter, setActiveFilter] = useState(null);
-  const filters = [
-    { id: 1, description: "Adult Jokes" },
-    { id: 2, description: "Dad Jokes" }
-  ];
 
-  const [jokes, loading, nextPage, setConditions] = useFirebaseCollection(
-    "jokes",
-    6
+  const [
+    jokes,
+    jokesLoading,
+    nextJokePage,
+    setConditions
+  ] = useFirebaseCollection("jokes", 6, ["id", "desc"]);
+
+  const [categories, categoriesLoading, ..._] = useFirebaseCollection(
+    "categories"
   );
 
   const changeFilter = filter => {
+    filter
+      ? setConditions(["categories", "array-contains", `${filter.id}`])
+      : setConditions([]);
     setActiveFilter(filter);
   };
 
   return (
     <main>
-      {filters.map(filter =>
-        <span key={filter.id} onClick={() => changeFilter(filter)}>
-          {filter.description}
+      {categories.map(category =>
+        <span key={category.id} onClick={() => changeFilter(category)}>
+          {category.label}
         </span>
       )}
       {activeFilter &&
@@ -32,7 +37,7 @@ function Home() {
       {jokes.map(joke => <JokeCard key={joke.id} {...joke} />)}
       <button
         onClick={() => {
-          nextPage();
+          nextJokePage();
         }}
       >
         {" "}Load More

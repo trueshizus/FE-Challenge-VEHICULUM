@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import firebaseContext from "./firebaseContext";
 
-function useFirebaseCollection(collectionName, pageSize) {
+function useFirebaseCollection(collectionName, pageSize, order) {
   const { database } = useContext(firebaseContext);
   const [loading, setLoading] = useState(false);
   const [collection, setCollection] = useState([]);
@@ -10,6 +10,7 @@ function useFirebaseCollection(collectionName, pageSize) {
   const nextPage = async () => {
     const results = await database[collectionName].get(
       pageSize,
+      order,
       conditions,
       collection.slice(-1)[0]
     );
@@ -21,9 +22,10 @@ function useFirebaseCollection(collectionName, pageSize) {
       const getDocuments = async () => {
         const documents = await database[collectionName].get(
           pageSize,
+          [],
           conditions
         );
-        setCollection(currentCol => [...currentCol, ...documents]);
+        setCollection(documents);
       };
       setLoading(true);
       getDocuments();

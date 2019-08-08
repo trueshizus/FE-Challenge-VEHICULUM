@@ -16,13 +16,23 @@ function collectionManager(firestore, collection) {
   const dbCollection = firestore.collection(collection);
 
   return {
-    async get(pageSize = 10, conditions, fromDocument) {
-      let query = dbCollection.limit(pageSize).orderBy("id", "desc");
+    async get(pageSize, order = [], conditions = [], fromDocument) {
+      console.log("collection", collection);
+      console.log("pageSize", pageSize);
+      let query = dbCollection;
+      if (pageSize) {
+        query = query.limit(pageSize);
+      }
+
+      if (order.length > 0) {
+        query = query.orderBy(...order);
+      }
+
       if (fromDocument) {
         query = query.startAfter(fromDocument.id);
       }
       if (conditions.length > 0) {
-        query = query.where(conditions);
+        query = query.where(...conditions);
       }
       const results = await query.get();
 
