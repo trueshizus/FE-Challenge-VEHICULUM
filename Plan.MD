@@ -32,6 +32,8 @@ Acount Information.
 6) Add user authentication, login, logout, and favorites.
 7) Add styling to each component and the main layout.
 
+## Script Used to migrate data to firestore: /src/migration/index.js
+
 ## Questions
 
 * Where does the Joke titles come from?
