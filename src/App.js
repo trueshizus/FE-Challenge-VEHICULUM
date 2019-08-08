@@ -8,11 +8,15 @@ import CreateJoke from "./components/CreateJoke";
 import MyPublishedJokes from "./components/MyPublishedJokes";
 import MySavedJokes from "./components/MySavedJokes";
 import AccountInformation from "./components/AccountInformation";
+import FirebaseContext from "./firebase/firebaseContext";
+
 import "./App.css";
 
-function App() {
+function App(props) {
+  const { firebase } = props;
+
   return (
-    <div>
+    <FirebaseContext.Provider value={firebase}>
       <Header />
       <Router>
         <Home path="/" />
@@ -23,7 +27,7 @@ function App() {
         <AccountInformation path="/me" />
       </Router>
       <Footer />
-    </div>
+    </FirebaseContext.Provider>
   );
 }
 

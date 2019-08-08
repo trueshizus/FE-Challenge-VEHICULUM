@@ -16,7 +16,7 @@ function Joke(props) {
 }
 
 Joke.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.object),
+  categories: PropTypes.arrayOf(PropTypes.string),
   created_at: PropTypes.string,
   icon_url: PropTypes.string,
   id: PropTypes.string,
