@@ -7,16 +7,18 @@ import JokePage from "./components/JokePage";
 import CreateJoke from "./components/CreateJoke";
 import MyPublishedJokes from "./components/MyPublishedJokes";
 import MySavedJokes from "./components/MySavedJokes";
+import Menu from "./components/Menu";
 import AccountInformation from "./components/AccountInformation";
 import FirebaseContext from "./firebase/firebaseContext";
 
-import "./App.css";
+import "./App.scss";
 
 function App(props) {
   const { firebase } = props;
 
   return (
     <FirebaseContext.Provider value={firebase}>
+      <Menu />
       <Header />
       <Router>
         <Home path="/" />

@@ -1,0 +1,6 @@
+@import "./sizes.scss";
+
+body {
+  min-width: $size-min-screen;
+  width: 100%;
+}

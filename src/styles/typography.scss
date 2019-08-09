@@ -1,0 +1,17 @@
+@import "./colors.scss";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+
+$font-main: "Montserrat", sans-serif;
+$font-size-regular: 15px;
+
+.typography {
+  font-family: $font-main;
+}
+
+.typography--link {
+  color: $color-link;
+  text-decoration: none;
+  font-size: $font-size-regular;
+  text-transform: uppercase;
+  padding: 15px;
+}

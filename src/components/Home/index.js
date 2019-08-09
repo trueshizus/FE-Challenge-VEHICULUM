@@ -26,9 +26,9 @@ function Home() {
   return (
     <main>
       {categories.map(category =>
-        <span key={category.id} onClick={() => changeFilter(category)}>
+        <li key={category.id} onClick={() => changeFilter(category)}>
           {category.label}
-        </span>
+        </li>
       )}
       {activeFilter &&
         <span>
