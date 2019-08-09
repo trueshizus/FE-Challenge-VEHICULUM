@@ -3,15 +3,42 @@
 
 $font-main: "Montserrat", sans-serif;
 $font-size-regular: 15px;
+$font-size-big: 48px;
+$font-size-medium: 22px;
+$font-link-padding: 15px;
+
+// Sizes
+$semi-bold: 600;
 
 .typography {
   font-family: $font-main;
+  font-size: $font-size-regular;
+}
+
+.typography--search {
+  color: $color-soft;
+  &:focus {
+    color: $color-main-text;
+  }
+}
+
+.typography__big {
+  font-size: $font-size-big;
+  color: $color-big-text;
+  margin: 15px 0;
+}
+
+.typography__medium {
+  font-size: $font-size-medium;
+  color: $color-ligth;
+  font-weight: $semi-bold;
+  margin: 10px 0;
 }
 
 .typography--link {
-  color: $color-link;
+  color: $color-ligth;
   text-decoration: none;
   font-size: $font-size-regular;
   text-transform: uppercase;
-  padding: 15px;
+  padding: $font-link-padding;
 }

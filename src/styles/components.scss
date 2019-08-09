@@ -1,0 +1,29 @@
+@import "./colors.scss";
+
+$input-border: solid 1px $color-ligth;
+$input-search-width: 458px;
+$input-search-heigth: 48px;
+
+.input {
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: $input-border;
+}
+
+.input--search {
+  max-width: $input-search-width;
+  height: $input-search-heigth;
+  width: 100%;
+  padding-left: 15px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  padding-right: 40px;
+  background-image: url("./assets/search-icon-ligth.png");
+  margin: 50px 0;
+
+  &:focus {
+    background-color: $color-ligth;
+    background-image: url("./assets/search-icon-dark.png");
+  }
+}

@@ -2,9 +2,12 @@
 @import "./sizes.scss";
 
 .header {
-  height: 320px;
   object-fit: contain;
   background-image: url("assets/header.jpg");
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
 }
 
 .menu {
