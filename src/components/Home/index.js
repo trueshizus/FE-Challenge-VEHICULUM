@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <main>
-      <div className="filters">
+      <div class="filters">
         {categories.map(category =>
           <span
             class="pill typography typography--pill"

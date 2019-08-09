@@ -5,26 +5,26 @@ import "../../styles/sections.scss";
 
 function Menu() {
   return (
-    <div className="menu">
-      <nav className="menu--nav">
+    <div class="menu">
+      <nav class="menu--nav">
         <Logo />
         <div>
-          <Link className={"typography typography--link"} to="/">
+          <Link class={"typography typography--link"} to="/">
             Home
           </Link>
-          <Link className={"typography typography--link"} to="jokes/:1">
+          <Link class={"typography typography--link"} to="jokes/:1">
             {" "}A Joke
           </Link>
-          <Link className={"typography typography--link"} to="jokes/new">
+          <Link class={"typography typography--link"} to="jokes/new">
             New Joke
           </Link>
-          <Link className={"typography typography--link"} to="jokes/mine">
+          <Link class={"typography typography--link"} to="jokes/mine">
             My Jokes
           </Link>
-          <Link className={"typography typography--link"} to="jokes/saved">
+          <Link class={"typography typography--link"} to="jokes/saved">
             Saved Jokes
           </Link>
-          <Link className={"typography typography--link"} to="/me">
+          <Link class={"typography typography--link"} to="/me">
             Me
           </Link>
         </div>
