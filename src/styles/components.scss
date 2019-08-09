@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./sizes.scss";
 
 $input-border: solid 1px $color-ligth;
 $input-search-width: 458px;
@@ -26,4 +27,13 @@ $input-search-heigth: 48px;
     background-color: $color-ligth;
     background-image: url("./assets/search-icon-dark.png");
   }
+}
+
+.pill {
+  display: inline-block;
+  width: 206px;
+  height: $pill-height;
+  border-radius: 2px;
+  background-color: #ff5b5b;
+  margin: $gutter-xsmall 0;
 }

@@ -25,11 +25,18 @@ function Home() {
 
   return (
     <main>
-      {categories.map(category =>
-        <li key={category.id} onClick={() => changeFilter(category)}>
-          {category.label}
-        </li>
-      )}
+      <div className="filters">
+        {categories.map(category =>
+          <span
+            class="pill typography typography--pill"
+            key={category.id}
+            onClick={() => changeFilter(category)}
+          >
+            {category.label}
+          </span>
+        )}
+      </div>
+
       {activeFilter &&
         <span>
           {activeFilter.description}

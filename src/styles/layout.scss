@@ -4,3 +4,8 @@ body {
   min-width: $size-min-screen;
   width: 100%;
 }
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}

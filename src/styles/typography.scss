@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./sizes.scss";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
 
 $font-main: "Montserrat", sans-serif;
@@ -15,6 +16,14 @@ $semi-bold: 600;
   font-size: $font-size-regular;
 }
 
+.typography--pill {
+  text-align: center;
+  color: $color-ligth;
+  line-height: $pill-height;
+  font-weight: $semi-bold;
+  text-transform: uppercase;
+}
+
 .typography--search {
   color: $color-soft;
   &:focus {
@@ -25,14 +34,14 @@ $semi-bold: 600;
 .typography__big {
   font-size: $font-size-big;
   color: $color-big-text;
-  margin: 15px 0;
+  margin: $gutter-medium 0;
 }
 
 .typography__medium {
   font-size: $font-size-medium;
   color: $color-ligth;
   font-weight: $semi-bold;
-  margin: 10px 0;
+  margin: $gutter-small 0;
 }
 
 .typography--link {
