@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "@reach/router";
 import JokeCard from "../JokeCard";
 import useFirebaseCollection from "../../firebase/useFirebaseCollection";
 import Loading from "../Loading";
@@ -44,9 +45,10 @@ function Home() {
           </span>}
       </div>
       <div class="joke-cards">
-        {loadingJokes
-          ? <Loading>Loading Jokes...</Loading>
-          : jokes.map(joke => <JokeCard key={joke.id} {...joke} />)}
+        {jokes.length === 0 &&
+          <NoJokesAvaliables activeFilter={activeFilter} />}
+        {jokes.length != 0 &&
+          jokes.map(joke => <JokeCard key={joke.id} {...joke} />)}
       </div>
       <div class="actions">
         <button
@@ -60,6 +62,24 @@ function Home() {
       </div>
     </main>
   );
+}
+
+function NoJokesAvaliables(props) {
+  const { activeFilter } = props;
+  return activeFilter
+    ? <div class="no-data typography__center">
+        <h1 class="typography typography__semi-bold">
+          {" "} No jokes avaliable for this filter! Try another one or submit
+          one{" "}
+        </h1>
+        <Link
+          class="link arrow-rigth typography typography--link typography__semi-bold"
+          to="jokes/new"
+        >
+          Submit Joke
+        </Link>
+      </div>
+    : <Loading>Loading Jokes...</Loading>;
 }
 
 export default Home;

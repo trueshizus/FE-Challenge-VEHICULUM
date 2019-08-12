@@ -17,6 +17,10 @@ $semi-bold: 600;
   font-size: $font-size-regular;
 }
 
+.typography__center {
+  text-align: center;
+}
+
 .typography--pill {
   color: $color-ligth;
   font-weight: $semi-bold;
@@ -76,6 +80,6 @@ $semi-bold: 600;
   text-transform: uppercase;
 }
 
-.typography--semi-bold {
+.typography__semi-bold {
   font-weight: $semi-bold;
 }

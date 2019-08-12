@@ -9,7 +9,7 @@ function Footer() {
           Got jokes? Get paid <br />for submitting!
         </h4>
         <Link
-          class="link arrow-rigth typography typography--link typography--semi-bold"
+          class="link arrow-rigth typography typography--link typography__semi-bold typography__center"
           to="jokes/new"
         >
           Submit Joke

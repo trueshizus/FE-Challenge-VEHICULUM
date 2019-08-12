@@ -8,7 +8,7 @@ function Joke(props) {
 
   return (
     <div class="card">
-      <h3 class="card__title typography typography--semi-bold">
+      <h3 class="card__title typography typography__semi-bold">
         {title}
       </h3>
       <p class="card__content typography">
@@ -17,7 +17,7 @@ function Joke(props) {
       <div class="card__link">
         <Link
           class={
-            "link arrow-rigth typography typography--link typography--semi-bold"
+            "link arrow-rigth typography typography--link typography__semi-bold"
           }
           to={`jokes/${id}`}
         >

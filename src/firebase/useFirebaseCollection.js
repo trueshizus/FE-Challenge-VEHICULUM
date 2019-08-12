@@ -3,7 +3,7 @@ import firebaseContext from "./firebaseContext";
 
 function useFirebaseCollection(collectionName, pageSize, order) {
   const { database } = useContext(firebaseContext);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [collection, setCollection] = useState([]);
   const [conditions, setConditions] = useState([]);
 

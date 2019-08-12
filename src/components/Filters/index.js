@@ -3,8 +3,16 @@ import PropTypes from "prop-types";
 import Loading from "../Loading";
 
 function Filters(props) {
-  const [showFullList, setShowFullList] = useState(false);
+  const { categories } = props;
+
+  return categories.length === 0
+    ? <Loading> Loading categories...</Loading>
+    : <CategoryList {...props} />;
+}
+
+function CategoryList(props) {
   const { categories, loadingCategories, changeFilter, activeFilter } = props;
+  const [showFullList, setShowFullList] = useState(false);
 
   const shortCategories = showFullList ? categories : categories.slice(0, 9);
   const showIfActive = category =>
