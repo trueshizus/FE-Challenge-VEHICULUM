@@ -6,7 +6,7 @@ import "../../styles/sections.scss";
 function Menu() {
   return (
     <div class="menu">
-      <nav class="menu--nav">
+      <nav class="menu--nav container">
         <Logo />
         <div>
           <Link class={"typography typography--nav"} to="/">

@@ -61,6 +61,15 @@ $semi-bold: 600;
   text-transform: uppercase;
 }
 
+.typography--footer {
+  color: $color-ligth;
+  font-size: $font-size-regular;
+  font-weight: $semi-bold;
+  margin: $gutter-medium 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .typography--link {
   color: $color-link;
   font-size: $font-size-link;

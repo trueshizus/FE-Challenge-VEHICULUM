@@ -18,7 +18,6 @@
 .menu--nav {
   height: 100%;
   margin: auto;
-  max-width: $size-max-screen;
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
@@ -34,4 +33,16 @@
 .actions {
   text-align: center;
   margin: 60px 0;
+}
+
+.container {
+  max-width: $size-max-screen;
+}
+
+.footer-actions {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

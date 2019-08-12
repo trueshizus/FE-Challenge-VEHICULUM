@@ -3,10 +3,19 @@ import { Link } from "@reach/router";
 
 function Footer() {
   return (
-    <div>
-      <h4>Got jokes? Get paid for submitting!</h4>
-      <Link to="jokes/new">Submit Joke</Link>
-    </div>
+    <footer>
+      <div class="container footer-actions">
+        <h4 class="typography typography--footer">
+          Got jokes? Get paid <br />for submitting!
+        </h4>
+        <Link
+          class="link arrow-rigth typography typography--link typography--semi-bold"
+          to="jokes/new"
+        >
+          Submit Joke
+        </Link>
+      </div>
+    </footer>
   );
 }
 

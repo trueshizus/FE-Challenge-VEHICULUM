@@ -25,7 +25,7 @@ function Home() {
   };
 
   return (
-    <main>
+    <main class="container">
       <div class="filters">
         {loadingCategories
           ? <Loading> Loading categories...</Loading>
