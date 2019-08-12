@@ -57,7 +57,8 @@
   grid-column-gap: 15px;
   grid-row-gap: 38px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-rows: repeat(auto-fill, 240px);
+  grid-auto-rows: 240px;
 
   @media screen and (max-width: 650px) {
     grid-row-gap: 15px;
