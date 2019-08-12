@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import JokeCard from "../JokeCard";
 import useFirebaseCollection from "../../firebase/useFirebaseCollection";
 import Loading from "../Loading";
+import Filters from "../Filters";
 
 function Home() {
   const [activeFilter, setActiveFilter] = useState(null);
@@ -26,23 +27,12 @@ function Home() {
 
   return (
     <main class="container">
-      <div class="filters">
-        {loadingCategories
-          ? <Loading> Loading categories...</Loading>
-          : categories.map(category =>
-              <span
-                class={`pill typography typography--pill ${category ===
-                activeFilter
-                  ? "pill__active"
-                  : ""}`}
-                key={category.id}
-                onClick={() => changeFilter(category)}
-              >
-                {category.label}
-              </span>
-            )}
-      </div>
-
+      <Filters
+        categories={categories}
+        loadingCategories={loadingCategories}
+        changeFilter={changeFilter}
+        activeFilter={activeFilter}
+      />
       <hr />
       <div class="tags">
         {activeFilter &&

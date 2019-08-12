@@ -1,0 +1,13 @@
+.show-mobile {
+  display: none;
+  @media screen and (max-width: 650px) {
+    display: initial;
+  }
+}
+
+.hide-mobile {
+  display: initial;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+}

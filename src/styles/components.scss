@@ -32,9 +32,6 @@ $input-search-heigth: 48px;
 
 /* Pill */
 .pill {
-  width: $pill-width;
-  height: $pill-height;
-  margin: $gutter-small 0;
   border-radius: 2px;
   background-color: $test-color;
   box-sizing: border-box;
@@ -127,20 +124,6 @@ $input-search-heigth: 48px;
     height: 10px;
     width: 30px;
     background-image: url("./assets/arrow-right.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-.arrow-down {
-  &:after {
-    content: " ";
-    position: absolute;
-    right: 15px;
-    margin-top: 13px;
-    height: 20px;
-    width: 30px;
-    background-image: url("./assets/arrow-down.svg");
     background-position: center;
     background-repeat: no-repeat;
   }

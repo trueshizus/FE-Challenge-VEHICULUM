@@ -1,0 +1,10 @@
+@mixin point-arrow($direction) {
+  .arrow-#{$direction} {
+    background-image: url("./assets/arrow-#{$direction}.svg");
+    background-position: center right 16px;
+    background-repeat: no-repeat;
+  }
+}
+
+@include point-arrow("up");
+@include point-arrow("down");
