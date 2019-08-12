@@ -8,10 +8,10 @@ body {
 }
 
 main {
-  max-width: 1100px;
+  max-width: $size-max-screen;
   margin: 0 auto;
 }
 
 hr {
-  color: $color-card;
+  color: $color-hr;
 }

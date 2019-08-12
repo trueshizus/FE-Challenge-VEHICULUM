@@ -18,18 +18,18 @@ $semi-bold: 600;
 }
 
 .typography--pill {
-  text-decoration: none;
-  text-align: center;
   color: $color-ligth;
-  line-height: $pill-height;
   font-weight: $semi-bold;
+  line-height: $pill-height;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
 .typography--tag {
+  color: $color-ligth;
   font-size: 12px;
   line-height: $pill-height-small;
-  color: $color-ligth;
 }
 
 .typography--search {
@@ -40,30 +40,31 @@ $semi-bold: 600;
 }
 
 .typography__big {
-  font-size: $font-size-big;
   color: $color-big-text;
+  font-size: $font-size-big;
   margin: $gutter-medium 0;
 }
 
 .typography__medium {
-  font-size: $font-size-medium;
   color: $color-ligth;
+  font-size: $font-size-medium;
   font-weight: $semi-bold;
   margin: $gutter-small 0;
 }
 
 .typography--nav {
   color: $color-ligth;
-  text-decoration: none;
   font-size: $font-size-regular;
-  text-transform: uppercase;
+  font-weight: $semi-bold;
   padding: $font-nav-padding;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .typography--link {
-  text-decoration: none;
-  font-size: $font-size-link;
   color: $color-link;
+  font-size: $font-size-link;
+  text-decoration: none;
   text-transform: uppercase;
 }
 

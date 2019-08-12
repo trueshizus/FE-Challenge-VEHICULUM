@@ -1,16 +1,24 @@
-/* Main Colors*/
+/* Main */
 $main-shaft: #303030;
 $sorrell-brown: #cfb995;
+$sorrell-brown-2: #d1bb91;
 $alabaster: #f9f9f9;
+$carrara: #ecebe9;
+$white: #ffffff;
+$silver-chalice: #b2b2b2;
+$test-color: #ff5b5b;
+$dark-shadow: rgba(0, 0, 0, 0.15);
 
-/* Layout Colors */
+/* Layout  */
 $color-navigation: $main-shaft;
 $color-navigation-active: $sorrell-brown;
-$color-body: #f9f9f9;
-$color-card: #ecebe9;
-$color-ligth: #ffffff;
-$color-soft: #b2b2b2;
-$color-link: #d1bb91;
+$color-body: $alabaster;
+$color-card-border: $carrara;
+$color-card-shadow: $dark-shadow;
+$color-hr: $carrara;
+$color-ligth: $white;
+$color-soft: $silver-chalice;
+$color-link: $sorrell-brown-2;
 
 /* Typography */
 $color-main-text: $main-shaft;
