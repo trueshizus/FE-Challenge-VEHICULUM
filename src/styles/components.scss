@@ -39,11 +39,16 @@ $input-search-heigth: 48px;
   background-color: $test-color;
   box-sizing: border-box;
   display: inline-block;
+  cursor: pointer;
+  position: relative;
 }
-
+.pill__action {
+  background-color: transparent;
+  border: 1px solid $color-link;
+}
 .pill__active {
-  color: #5e5e5e;
-  border: solid 1px #5e5e5e;
+  color: $color-link-active;
+  border: solid 1px $color-link-active;
 }
 
 /* Tag */
@@ -115,13 +120,27 @@ $input-search-heigth: 48px;
   align-self: flex-end;
 }
 
-.link__arrow-rigth {
+.arrow-rigth {
   &:after {
     content: " ";
     display: inline-block;
     height: 10px;
     width: 30px;
     background-image: url("./assets/arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.arrow-down {
+  &:after {
+    content: " ";
+    position: absolute;
+    right: 15px;
+    margin-top: 13px;
+    height: 20px;
+    width: 30px;
+    background-image: url("./assets/arrow-down.svg");
     background-position: center;
     background-repeat: no-repeat;
   }

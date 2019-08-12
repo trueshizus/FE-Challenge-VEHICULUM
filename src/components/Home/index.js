@@ -58,13 +58,16 @@ function Home() {
           ? <Loading>Loading Jokes...</Loading>
           : jokes.map(joke => <JokeCard key={joke.id} {...joke} />)}
       </div>
-      <button
-        onClick={() => {
-          nextJokePage();
-        }}
-      >
-        {" "}Load More
-      </button>
+      <div class="actions">
+        <button
+          class="pill pill__action typography typography--pill typography--link arrow-down"
+          onClick={() => {
+            nextJokePage();
+          }}
+        >
+          {" "}View More
+        </button>
+      </div>
     </main>
   );
 }

@@ -17,7 +17,7 @@ function Joke(props) {
       <div class="card__link">
         <Link
           class={
-            "link link__arrow-rigth typography typography--link typography--semi-bold"
+            "link arrow-rigth typography typography--link typography--semi-bold"
           }
           to={`jokes/${id}`}
         >
