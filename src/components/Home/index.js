@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import JokeCard from "../JokeCard";
 import useFirebaseCollection from "../../firebase/useFirebaseCollection";
+import Loading from "../Loading";
 
 function Home() {
   const [activeFilter, setActiveFilter] = useState(null);
 
   const [
     jokes,
-    jokesLoading,
+    loadingJokes,
     nextJokePage,
     setConditions
   ] = useFirebaseCollection("jokes", 6, ["id", "desc"]);
 
-  const [categories, categoriesLoading, ..._] = useFirebaseCollection(
+  const [categories, loadingCategories, _] = useFirebaseCollection(
     "categories"
   );
 
@@ -26,22 +27,37 @@ function Home() {
   return (
     <main>
       <div class="filters">
-        {categories.map(category =>
-          <span
-            class="pill typography typography--pill"
-            key={category.id}
-            onClick={() => changeFilter(category)}
-          >
-            {category.label}
-          </span>
-        )}
+        {loadingCategories
+          ? <Loading> Loading categories...</Loading>
+          : categories.map(category =>
+              <span
+                class={`pill typography typography--pill ${category ===
+                activeFilter
+                  ? "pill__active"
+                  : ""}`}
+                key={category.id}
+                onClick={() => changeFilter(category)}
+              >
+                {category.label}
+              </span>
+            )}
       </div>
 
-      {activeFilter &&
-        <span>
-          {activeFilter.description}
-        </span>}
-      {jokes.map(joke => <JokeCard key={joke.id} {...joke} />)}
+      <hr />
+      <div class="tags">
+        {activeFilter &&
+          <span
+            class="tag typography typography--tag"
+            onClick={() => changeFilter(null)}
+          >
+            {activeFilter.label}
+          </span>}
+      </div>
+      <div class="joke-cards">
+        {loadingJokes
+          ? <Loading>Loading Jokes...</Loading>
+          : jokes.map(joke => <JokeCard key={joke.id} {...joke} />)}
+      </div>
       <button
         onClick={() => {
           nextJokePage();

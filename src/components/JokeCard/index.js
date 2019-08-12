@@ -1,16 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "@reach/router";
 
 function Joke(props) {
-  const { title, value } = props;
+  const { id, value } = props;
+  const title = value.split(" ").slice(0, 2).join(" ");
+
   return (
-    <div>
-      <h3>
+    <div class="card card--medium">
+      <h3 class="card__title typography typography--semi-bold">
         {title}
       </h3>
-      <p>
+      <p class="card__content typography">
         {value}
       </p>
+      <div class="card__link">
+        <Link
+          class={
+            "link link__arrow-rigth typography typography--link typography--semi-bold"
+          }
+          to={`jokes/${id}`}
+        >
+          See stats
+        </Link>
+      </div>
     </div>
   );
 }

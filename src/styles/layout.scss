@@ -1,11 +1,17 @@
 @import "./sizes.scss";
+@import "./colors.scss";
 
 body {
   min-width: $size-min-screen;
   width: 100%;
+  background-color: $color-body;
 }
 
 main {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+hr {
+  color: $color-card;
 }

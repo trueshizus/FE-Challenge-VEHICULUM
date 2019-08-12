@@ -1,11 +1,20 @@
+/* Main Colors*/
+$main-shaft: #303030;
+$sorrell-brown: #cfb995;
+$alabaster: #f9f9f9;
+
 /* Layout Colors */
-$color-navigation: #303030;
-$color-navigation-active: #cfb995;
+$color-navigation: $main-shaft;
+$color-navigation-active: $sorrell-brown;
 $color-body: #f9f9f9;
 $color-card: #ecebe9;
 $color-ligth: #ffffff;
 $color-soft: #b2b2b2;
+$color-link: #d1bb91;
 
 /* Typography */
-$color-main-text: #303030;
-$color-big-text: #cfb995;
+$color-main-text: $main-shaft;
+$color-big-text: $sorrell-brown;
+
+/* Components */
+$color-link: $sorrell-brown;

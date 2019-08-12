@@ -3,12 +3,13 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
 
 $font-main: "Montserrat", sans-serif;
+$font-size-link: 14px;
 $font-size-regular: 15px;
-$font-size-big: 48px;
 $font-size-medium: 22px;
-$font-link-padding: 15px;
+$font-nav-padding: 15px;
+$font-size-big: 48px;
 
-// Sizes
+// Weight
 $semi-bold: 600;
 
 .typography {
@@ -17,11 +18,18 @@ $semi-bold: 600;
 }
 
 .typography--pill {
+  text-decoration: none;
   text-align: center;
   color: $color-ligth;
   line-height: $pill-height;
   font-weight: $semi-bold;
   text-transform: uppercase;
+}
+
+.typography--tag {
+  font-size: 12px;
+  line-height: $pill-height-small;
+  color: $color-ligth;
 }
 
 .typography--search {
@@ -44,10 +52,21 @@ $semi-bold: 600;
   margin: $gutter-small 0;
 }
 
-.typography--link {
+.typography--nav {
   color: $color-ligth;
   text-decoration: none;
   font-size: $font-size-regular;
   text-transform: uppercase;
-  padding: $font-link-padding;
+  padding: $font-nav-padding;
+}
+
+.typography--link {
+  text-decoration: none;
+  font-size: $font-size-link;
+  color: $color-link;
+  text-transform: uppercase;
+}
+
+.typography--semi-bold {
+  font-weight: $semi-bold;
 }

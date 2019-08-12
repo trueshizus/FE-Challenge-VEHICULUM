@@ -5,6 +5,7 @@ $input-border: solid 1px $color-ligth;
 $input-search-width: 458px;
 $input-search-heigth: 48px;
 
+/* Input */
 .input {
   box-sizing: border-box;
   border-radius: 4px;
@@ -29,11 +30,99 @@ $input-search-heigth: 48px;
   }
 }
 
+/* Pill */
 .pill {
   display: inline-block;
-  width: 206px;
+  width: $pill-width;
   height: $pill-height;
   border-radius: 2px;
   background-color: #ff5b5b;
   margin: $gutter-xsmall 0;
+  box-sizing: border-box;
+}
+
+.pill__active {
+  color: #5e5e5e;
+  border: solid 1px #5e5e5e;
+}
+
+/* Tag */
+.tag {
+  &:before {
+    content: "·";
+    color: $color-ligth;
+    padding-right: 5px;
+  }
+  position: relative;
+  height: $pill-height-small;
+  border-radius: 11px;
+  background-color: #57e690;
+  padding: 2px 10px;
+}
+
+/* Card */
+.card {
+  border-radius: 2px;
+  border: solid 1px #ecebe9;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.joke-cards {
+  display: grid;
+  grid-gap: 5px;
+  grid-row-gap: 38px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card--medium {
+  width: 360px;
+  height: 264px;
+}
+
+.card__title {
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin-right: 5px;
+    background-image: url("./assets/ligthing-bolt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.card__content {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+.card__link {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.link__arrow-rigth {
+  &:after {
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    width: 30px;
+    background-image: url("./assets/arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
