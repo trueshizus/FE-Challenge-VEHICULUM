@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   padding: 40px 0;
+  margin-bottom: 60px;
 }
 
 .menu {
@@ -50,6 +51,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
+}
+
+.tags {
+  border-top: 1px solid $color-hr;
+  margin-top: 34px;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .joke-cards {

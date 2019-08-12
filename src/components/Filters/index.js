@@ -14,7 +14,7 @@ function Filters(props) {
   return (
     <div class="filters">
       {!loadingCategories &&
-        <span
+        <button
           class={`pill pill__action typography typography--pill typography--link show-mobile ${showFullList
             ? "arrow-up"
             : "arrow-down"}`}
@@ -23,7 +23,7 @@ function Filters(props) {
           }}
         >
           {showFullList ? "Hide" : "Show Filters"}
-        </span>}
+        </button>}
       {loadingCategories
         ? <Loading> Loading categories...</Loading>
         : shortCategories.map(category =>
@@ -41,7 +41,7 @@ function Filters(props) {
             </span>
           )}
       {!loadingCategories &&
-        <span
+        <button
           class={`pill pill__action typography typography--pill typography--link hide-mobile ${showFullList
             ? "arrow-up"
             : "arrow-down"}`}
@@ -50,7 +50,7 @@ function Filters(props) {
           }}
         >
           {showFullList ? "Hide" : "View all"}
-        </span>}
+        </button>}
     </div>
   );
 }
