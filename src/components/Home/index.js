@@ -33,7 +33,7 @@ function Home() {
         changeFilter={changeFilter}
         activeFilter={activeFilter}
       />
-      <hr />
+
       <div class="tags">
         {activeFilter &&
           <span
@@ -50,7 +50,7 @@ function Home() {
       </div>
       <div class="actions">
         <button
-          class="pill pill__action typography typography--pill typography--link arrow-down"
+          class="pill pill--medium  pill__action typography typography--pill typography--link arrow-down"
           onClick={() => {
             nextJokePage();
           }}
