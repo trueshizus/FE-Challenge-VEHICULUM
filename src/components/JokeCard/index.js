@@ -7,7 +7,7 @@ function Joke(props) {
   const title = value.split(" ").slice(0, 2).join(" ");
 
   return (
-    <div class="card card--medium">
+    <div class="card">
       <h3 class="card__title typography typography--semi-bold">
         {title}
       </h3>

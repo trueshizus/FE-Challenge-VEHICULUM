@@ -77,18 +77,6 @@ $input-search-heigth: 48px;
   }
 }
 
-.joke-cards {
-  display: grid;
-  grid-gap: 5px;
-  grid-row-gap: 38px;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.card--medium {
-  width: 360px;
-  height: 264px;
-}
-
 .card__title {
   font-size: 16px;
   text-transform: uppercase;
