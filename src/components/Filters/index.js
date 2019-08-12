@@ -44,7 +44,7 @@ function Filters(props) {
         <span
           class={`pill pill__action typography typography--pill typography--link hide-mobile ${showFullList
             ? "arrow-up"
-            : "arrow-dopwn"}`}
+            : "arrow-down"}`}
           onClick={() => {
             setShowFullList(value => !value);
           }}
