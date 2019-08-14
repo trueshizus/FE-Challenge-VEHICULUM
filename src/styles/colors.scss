@@ -1,4 +1,6 @@
 /* Main */
+
+/* Names source: http://chir.ag/projects/name-that-color*/
 $main-shaft: #303030;
 $sorrell-brown: #cfb995;
 $sorrell-brown-2: #d1bb91;
@@ -9,12 +11,14 @@ $silver-chalice: #b2b2b2;
 $test-color: #ff5b5b;
 $scorpion: #5e5e5e;
 $dark-shadow: rgba(0, 0, 0, 0.15);
+$fuel-yellow: #f3a536;
 
 /* Layout  */
 $color-navigation: $main-shaft;
 $color-navigation-active: $sorrell-brown;
 $color-body: $alabaster;
 $color-card-border: $carrara;
+$color-card-trending: $fuel-yellow;
 $color-card-shadow: $dark-shadow;
 $color-background-contrast: $carrara;
 $color-ligth: $white;

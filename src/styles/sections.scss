@@ -74,3 +74,29 @@
     grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
+
+.single-joke {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 280px 1fr;
+  grid-template-areas: "joke ranking" "actions ranking";
+  margin-bottom: 60px;
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas: "joke" "actions" "ranking";
+  }
+}
+
+.single-joke__joke-card {
+  grid-area: joke;
+}
+
+.single-joke__ranking {
+  grid-area: ranking;
+}
+
+.single-joke__actions {
+  grid-area: actions;
+}

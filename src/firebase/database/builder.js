@@ -16,7 +16,13 @@ function collectionManager(firestore, collection) {
   const dbCollection = firestore.collection(collection);
 
   return {
-    async get(pageSize, order = [], conditions = [], fromDocument) {
+    async get(documentId) {
+      const docRef = dbCollection.doc(documentId);
+      const rawDocument = await docRef.get();
+      return { id: rawDocument.id, ...rawDocument.data() };
+    },
+
+    async list(pageSize, order = [], conditions = [], fromDocument) {
       console.log("collection", collection);
       console.log("pageSize", pageSize);
       let query = dbCollection;
@@ -36,13 +42,13 @@ function collectionManager(firestore, collection) {
       }
       const results = await query.get();
 
-      return results.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      return results.docs.map(doc => ({ ...doc.data(), id: doc.id }));
     },
     // Add pagination handling
     async subscribe(setDocuments) {
       const unsubscribe = dbCollection.onSnapshot(querySnapshot => {
         setDocuments(
-          querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+          querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))
         );
       });
       return unsubscribe;

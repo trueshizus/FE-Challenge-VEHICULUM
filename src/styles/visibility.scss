@@ -1,12 +1,12 @@
 .show-mobile {
   display: none;
   @media screen and (max-width: 650px) {
-    display: initial;
+    display: inherit;
   }
 }
 
 .hide-mobile {
-  display: initial;
+  display: inherit;
   @media screen and (max-width: 650px) {
     display: none;
   }

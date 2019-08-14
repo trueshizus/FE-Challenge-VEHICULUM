@@ -38,7 +38,7 @@ function Home() {
       <div class="tags">
         {activeFilter &&
           <span
-            class="tag typography typography--tag"
+            class="tag typography typography--tag bullet-small-rigth"
             onClick={() => changeFilter(null)}
           >
             {activeFilter.label}

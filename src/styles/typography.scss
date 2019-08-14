@@ -83,3 +83,31 @@ $semi-bold: 600;
 .typography__semi-bold {
   font-weight: $semi-bold;
 }
+
+.typography--big-title {
+  font-size: 40px;
+}
+
+.typography--trending {
+  color: $color-card-trending;
+  text-transform: uppercase;
+}
+
+.typography--vote {
+  text-align: center;
+  font-size: 12px;
+}
+
+.typography--vote__up {
+  color: #68b680;
+  &:hover {
+    color: #46915d;
+  }
+}
+
+.typography--vote__down {
+  color: #ff3750;
+  &:hover {
+    color: #ce2c40;
+  }
+}

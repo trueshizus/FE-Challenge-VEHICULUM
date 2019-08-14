@@ -6,5 +6,17 @@
   }
 }
 
+@mixin action-arrow($direction) {
+  .action-arrow-#{$direction} {
+    background-image: url("./assets/action-arrow-#{$direction}.svg");
+    background-position: center #{$direction} 5px;
+    background-repeat: no-repeat;
+    padding-#{$direction}: 20px;
+    cursor: pointer;
+  }
+}
+
 @include point-arrow("up");
 @include point-arrow("down");
+@include action-arrow("left");
+@include action-arrow("right");

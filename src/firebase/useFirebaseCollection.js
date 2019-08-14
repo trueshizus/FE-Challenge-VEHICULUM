@@ -20,7 +20,7 @@ function useFirebaseCollection(collectionName, pageSize, order) {
   useEffect(
     () => {
       const getDocuments = async () => {
-        const documents = await database[collectionName].get(
+        const documents = await database[collectionName].list(
           pageSize,
           [],
           conditions

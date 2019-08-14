@@ -56,17 +56,19 @@ $input-search-heigth: 48px;
 
 /* Tag */
 .tag {
-  &:before {
-    content: "·";
-    color: $color-ligth;
-    padding-right: 5px;
-  }
   display: inline-block;
   background-color: $test-color;
   position: relative;
   border-radius: 11px;
   padding: 2px 10px;
-  line-height: 22px;
+  line-height: 20px;
+}
+
+.bullet-small-rigth {
+  &:before {
+    content: "·";
+    padding-right: 2px;
+  }
 }
 
 /* Card */
@@ -74,14 +76,22 @@ $input-search-heigth: 48px;
   background-color: $white;
   border-radius: 2px;
   border: solid 1px $color-card-border;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
 
   &:hover {
     box-shadow: 0 1px 7px 0 $color-card-shadow;
   }
+}
+
+.card--box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.card--box-small {
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .card__title {
@@ -105,11 +115,31 @@ $input-search-heigth: 48px;
   margin-top: 10px;
   font-size: 14px;
   line-height: 1.57;
+  max-width: 600px;
 }
 
 .card__link {
   margin-top: auto;
   align-self: flex-end;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__big-title {
+  display: flex;
+  align-items: flex-end;
+  color: $color-big-text;
+  margin-top: 10px;
+}
+
+.card__big-title__divider {
+  flex-grow: 1;
+  border-bottom: 2px solid $color-big-text;
+  margin: 5px 10px;
 }
 
 .arrow-rigth {
@@ -133,4 +163,51 @@ $input-search-heigth: 48px;
   flex-direction: column;
   justify-content: space-evenly;
   background-color: $color-background-contrast;
+}
+
+.single-joke__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-joke__actions__votes {
+  display: flex;
+  align-items: flex-end;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.single-joke__actions__vote {
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.single-joke__actions__vote--up {
+  background-color: #68b680;
+  background-image: url("./assets/up-vote.svg");
+  &:hover {
+    background-color: #46915d;
+  }
+}
+
+.single-joke__actions__vote--down {
+  background-color: #ff3750;
+  background-image: url("./assets/down-vote.svg");
+  &:hover {
+    background-color: #ce2c40;
+  }
+}
+
+.single-joke__actions__pages {
+  display: flex;
+  align-items: center;
+  width: 240px;
+  justify-content: space-between;
 }
