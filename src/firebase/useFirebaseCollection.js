@@ -8,7 +8,7 @@ function useFirebaseCollection(collectionName, pageSize, order) {
   const [conditions, setConditions] = useState([]);
 
   const nextPage = async () => {
-    const results = await database[collectionName].get(
+    const results = await database[collectionName].list(
       pageSize,
       order,
       conditions,
