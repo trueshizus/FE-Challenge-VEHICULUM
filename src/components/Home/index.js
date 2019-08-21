@@ -10,12 +10,12 @@ function Home() {
 
   const [
     jokes,
-    loadingJokes,
+    ,
     nextJokePage,
     setConditions
   ] = useFirebaseCollection("jokes", 6, ["id", "desc"]);
 
-  const [categories, loadingCategories, _] = useFirebaseCollection(
+  const [categories, loadingCategories, ,] = useFirebaseCollection(
     "categories"
   );
 
@@ -47,7 +47,7 @@ function Home() {
       <div class="joke-cards">
         {jokes.length === 0 &&
           <NoJokesAvaliables activeFilter={activeFilter} />}
-        {jokes.length != 0 &&
+        {jokes.length !== 0 &&
           jokes.map(joke => <JokeCard key={joke.id} {...joke} />)}
       </div>
       <div class="actions">
