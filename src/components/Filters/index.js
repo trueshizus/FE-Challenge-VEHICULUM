@@ -18,6 +18,7 @@ function CategoryList(props) {
   const showIfActive = category =>
     category === activeFilter ? "pill__active" : "";
   const mobileVisibility = showFullList ? "" : "hide-mobile";
+  const pillColor = ({ color }) => ({ backgroundColor: color });
 
   return (
     <div class="filters">
@@ -39,6 +40,7 @@ function CategoryList(props) {
               class={`pill typography typography--pill ${mobileVisibility} ${showIfActive(
                 category
               )}`}
+              style={pillColor(category)}
               key={category.id}
               onClick={() => {
                 setShowFullList(false);

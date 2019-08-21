@@ -26,6 +26,8 @@ function Home() {
     setActiveFilter(filter);
   };
 
+  const pillColor = ({ color }) => ({ backgroundColor: color });
+
   return (
     <main class="container">
       <Filters
@@ -39,6 +41,7 @@ function Home() {
         {activeFilter &&
           <span
             class="tag typography typography--tag bullet-small-rigth"
+            style={pillColor(activeFilter)}
             onClick={() => changeFilter(null)}
           >
             {activeFilter.label}
