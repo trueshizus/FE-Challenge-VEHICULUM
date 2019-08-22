@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import useFirebaseDocument from "../../firebase/useFirebaseDocument";
 import Loading from "../Loading";
 import Tag from "../Tag";
+import TopJokes from "../TopJokes";
 
 function JokePage(props) {
   const { jokeId } = props;
@@ -43,15 +44,7 @@ function JokeView(props) {
         </p>
       </div>
 
-      <div class="single-joke__ranking card">
-        <p>THE TOP 10 JOKES THIS WEEK</p>
-        <p>THE TOP 10 JOKES THIS WEEK</p>
-        <p>THE TOP 10 JOKES THIS WEEK</p>
-        <p>THE TOP 10 JOKES THIS WEEK</p>
-        <p>THE TOP 10 JOKES THIS WEEK</p>
-        <p>THE TOP 10 JOKES THIS WEEK</p>
-        <p>THE TOP 10 JOKES THIS WEEK</p>
-      </div>
+      <TopJokes />
 
       <div class="single-joke__actions">
         <div class="single-joke__actions__votes">

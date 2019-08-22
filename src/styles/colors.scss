@@ -8,10 +8,13 @@ $alabaster: #f9f9f9;
 $carrara: #ecebe9;
 $white: #ffffff;
 $silver-chalice: #b2b2b2;
-$test-color: #ff5b5b;
 $scorpion: #5e5e5e;
 $dark-shadow: rgba(0, 0, 0, 0.15);
 $fuel-yellow: #f3a536;
+$silver-tree: #68b680;
+$fruit-salad: #46915d;
+$radical-red: #ff3750;
+$brick-red: #ce2c40;
 
 /* Layout  */
 $color-navigation: $main-shaft;
@@ -25,6 +28,10 @@ $color-ligth: $white;
 $color-soft: $silver-chalice;
 $color-link: $sorrell-brown-2;
 $color-link-active: $scorpion;
+$color-upvote: $silver-tree;
+$color-upvote-hover: $fruit-salad;
+$color-downvote: $radical-red;
+$color-downvote-hover: $brick-red;
 
 /* Typography */
 $color-main-text: $main-shaft;

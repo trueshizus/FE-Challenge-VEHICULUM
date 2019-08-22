@@ -33,7 +33,6 @@ $input-search-heigth: 48px;
 /* Pill */
 .pill {
   border-radius: 2px;
-  background-color: $test-color;
   box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
@@ -57,7 +56,6 @@ $input-search-heigth: 48px;
 /* Tag */
 .tag {
   display: inline-block;
-  background-color: $test-color;
   position: relative;
   border-radius: 11px;
   padding: 2px 10px;
@@ -210,4 +208,14 @@ $input-search-heigth: 48px;
   align-items: center;
   width: 240px;
   justify-content: space-between;
+}
+
+.single-joke__ranking {
+  padding: 20px;
+}
+
+.single-joke__ranking__link {
+  color: $color-navigation;
+  display: block;
+  margin-top: 15px;
 }
