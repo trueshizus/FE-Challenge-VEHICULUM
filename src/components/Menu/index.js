@@ -7,7 +7,9 @@ function Menu() {
   return (
     <div class="menu">
       <nav class="menu--nav container">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <div>
           <Link class="typography typography--nav" to="/">
             Home
