@@ -67,7 +67,7 @@ function CategoryList(props) {
 
 Filters.propTypes = {
   categories: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.number, label: PropTypes.string })
+    PropTypes.shape({ id: PropTypes.string, label: PropTypes.string })
   ),
   onClick: PropTypes.func
 };
