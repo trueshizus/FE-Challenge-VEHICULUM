@@ -19,12 +19,10 @@ function collectionManager(firestore, collection) {
     async get(documentId) {
       const docRef = dbCollection.doc(documentId);
       const rawDocument = await docRef.get();
-      return { id: rawDocument.id, ...rawDocument.data() };
+      return { ...rawDocument.data(), id: rawDocument.id };
     },
 
     async list(pageSize, order = [], conditions = [], fromDocument) {
-      console.log("collection", collection);
-      console.log("pageSize", pageSize);
       let query = dbCollection;
       if (pageSize) {
         query = query.limit(pageSize);
@@ -66,18 +64,9 @@ function collectionManager(firestore, collection) {
       dbCollection.doc(document.id).delete();
     },
 
-    async update(document) {
-      const docRef = dbCollection.doc(document.id);
-      return await dbCollection.runTransaction(transaction => {
-        return transaction.get(docRef).then(function(sfDoc) {
-          if (!sfDoc.exists) {
-            throw Error.new(
-              "The Document you triend to update, does not exist!"
-            );
-          }
-          transaction.update(docRef, document);
-        });
-      });
+    async update(document, changes) {
+      const docRef = await dbCollection.doc(document.id);
+      docRef.update(changes);
     }
   };
 }

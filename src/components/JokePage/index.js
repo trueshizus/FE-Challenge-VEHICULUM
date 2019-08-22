@@ -6,37 +6,27 @@ import Tag from "../Tag";
 
 function JokePage(props) {
   const { jokeId } = props;
-  const [joke, isLoading] = useFirebaseDocument("jokes", jokeId);
+  const [joke, isLoading, updateJoke] = useFirebaseDocument("jokes", jokeId);
 
   return (
     <div>
-      {isLoading && <Loading> Loading joke...</Loading>}
-      {!isLoading && <JokeView {...joke} />}
+      {isLoading
+        ? <Loading> Loading joke...</Loading>
+        : <JokeView joke={joke} updateJoke={updateJoke} />}
     </div>
   );
 }
 
 function JokeView(props) {
-  const {
-    categories = [],
-    created_at,
-    icon_url,
-    id,
-    updated_at,
-    url,
-    value = "",
-    upvotes,
-    downvotes,
-    author
-  } = props;
+  const { joke, updateJoke } = props;
 
-  const title = value.split(" ").slice(0, 2).join(" ");
+  const title = joke.value.split(" ").slice(0, 2).join(" ");
 
   return (
     <main class="container single-joke">
       <div class="single-joke__joke-card card card--box">
         <div class="card__header">
-          {categories.map(id => <Tag key={id} id={id} />)}
+          {joke.categories.map(id => <Tag key={id} id={id} />)}
           <h4 class="typography typography--trending typography__semi-bold bullet-small-rigth">
             Trending
           </h4>
@@ -49,7 +39,7 @@ function JokeView(props) {
           <h6> NO #1</h6>
         </div>
         <p class="card__content typography">
-          {value}
+          {joke.value}
         </p>
       </div>
 
@@ -66,15 +56,22 @@ function JokeView(props) {
       <div class="single-joke__actions">
         <div class="single-joke__actions__votes">
           <div>
-            <div class="single-joke__actions__vote single-joke__actions__vote--up" />
+            <div
+              class="single-joke__actions__vote single-joke__actions__vote--up"
+              onClick={() => updateJoke(joke, { upvotes: joke.upvotes + 1 })}
+            />
             <div class="typography typography__semi-bold typography--vote typography--vote__up">
-              {upvotes}
+              {joke.upvotes}
             </div>
           </div>
           <div>
-            <div class="single-joke__actions__vote single-joke__actions__vote--down " />
+            <div
+              class="single-joke__actions__vote single-joke__actions__vote--down "
+              onClick={() =>
+                updateJoke(joke, { downvotes: joke.downvotes - 1 })}
+            />
             <div class="typography typography__semi-bold typography--vote typography--vote__down">
-              {downvotes}
+              {joke.downvotes}
             </div>
           </div>
         </div>
