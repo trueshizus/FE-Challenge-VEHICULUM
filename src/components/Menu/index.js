@@ -4,31 +4,52 @@ import { ReactComponent as Logo } from "../../assets/logo-horizontal.svg";
 import "../../styles/sections.scss";
 
 function Menu() {
+  const currentUser = false; //useCurrentUser();
+
   return (
     <div class="menu">
-      <nav class="menu--nav container">
+      <nav role="navigation" class="menu--nav container">
         <Link to="/">
-          <Logo />
+          <Logo style={{ height: "60px" }} />
         </Link>
-        <div>
+        <div class="menu--nav--links">
           <Link class="typography typography--nav" to="/">
-            Home
+            SO FUNKTIONIERT’S
           </Link>
-          <Link class="typography typography--nav" to="jokes/:1">
-            {" "}A Joke
+
+          <Link class="typography typography--nav" to="/">
+            SONDERANGEBOTE
           </Link>
-          <Link class="typography typography--nav" to="jokes/new">
-            New Joke
+
+          <Link class="typography typography--nav" to="/signup">
+            LOG IN
           </Link>
-          <Link class="typography typography--nav" to="jokes/mine">
-            My Jokes
-          </Link>
-          <Link class="typography typography--nav" to="jokes/saved">
-            Saved Jokes
-          </Link>
-          <Link class="typography typography--nav" to="/me">
-            Me
-          </Link>
+
+          <div class="menu--nav--dropdown">
+            <Link class="typography typography--nav" to="/signup">
+              MEIN BEREICH
+            </Link>
+            <div class="menu--nav--dropdown--links">
+              <Link class="typography typography--nav--sublink" to="jokes/mine">
+                My published jokes
+              </Link>
+
+              <Link class="typography typography--nav--sublink" to="/signup">
+                My saved jokes
+              </Link>
+
+              <Link
+                class="typography typography--nav--sublink"
+                to="jokes/saved"
+              >
+                Account Information
+              </Link>
+
+              <Link class="typography typography--nav--sublink" to="jokes/new">
+                Publish new joke
+              </Link>
+            </div>
+          </div>
         </div>
       </nav>
     </div>

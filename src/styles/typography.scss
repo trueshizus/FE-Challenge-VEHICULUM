@@ -64,6 +64,12 @@ $semi-bold: 600;
   text-transform: uppercase;
 }
 
+.typography--nav--sublink {
+  color: $color-link-secondary;
+  font-size: $font-size-link;
+  text-decoration: none;
+}
+
 .typography--footer {
   color: $color-ligth;
   font-size: $font-size-regular;
