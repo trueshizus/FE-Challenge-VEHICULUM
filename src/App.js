@@ -8,6 +8,7 @@ import CreateJoke from "./components/CreateJoke";
 import MyPublishedJokes from "./components/MyPublishedJokes";
 import MySavedJokes from "./components/MySavedJokes";
 import Menu from "./components/Menu";
+import Login from "./components/Login";
 import AccountInformation from "./components/AccountInformation";
 import FirebaseContext from "./firebase/firebaseContext";
 
@@ -27,6 +28,7 @@ function App(props) {
         <MyPublishedJokes path="jokes/mine" />
         <MySavedJokes path="jokes/saved" />
         <AccountInformation path="/me" />
+        <Login path="/login" />
       </Router>
       <Footer />
     </FirebaseContext.Provider>
