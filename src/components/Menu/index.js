@@ -29,7 +29,10 @@ function Menu() {
                 LOG IN
               </Link>
             : <div class="menu--nav--dropdown">
-                <div class="typography typography--nav" to="/signup">
+                <div
+                  class="typography typography--nav menu--nav--dropdown--label"
+                  to="/signup"
+                >
                   MEIN BEREICH
                 </div>
                 <div class="menu--nav--dropdown--links">

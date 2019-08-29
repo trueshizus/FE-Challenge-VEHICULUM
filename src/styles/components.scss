@@ -235,6 +235,7 @@ $input-search-heigth: 48px;
   position: relative;
   background-color: $color-link;
   display: flex;
+  padding-left: 15px;
 
   &:hover > .menu--nav--dropdown--links {
     visibility: visible;
@@ -243,6 +244,31 @@ $input-search-heigth: 48px;
     border-top: 20px solid transparent;
     padding-top: -6px;
     background-clip: padding-box;
+  }
+}
+
+.menu--nav--dropdown--label {
+  width: 170px;
+  padding-left: 25px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url("./assets/user-icon.png");
+    width: 16px;
+    height: 16px;
+    top: 36%;
+    left: 10px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("./assets/triangle.png");
+    width: 16px;
+    height: 8px;
+    top: 28px;
+    right: 10px;
   }
 }
 
