@@ -1,6 +1,16 @@
 @import "./colors.scss";
 @import "./sizes.scss";
 
+.login {
+  min-height: 300px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $alto;
+  flex-direction: column;
+}
+
 .header {
   object-fit: contain;
   background-image: url("assets/header.jpg");

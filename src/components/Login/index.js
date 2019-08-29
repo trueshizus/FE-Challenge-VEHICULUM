@@ -13,10 +13,14 @@ function Login() {
 
   return (
     <main class="container">
-      <div class="card">
+      <div class="login">
+        <h1 class="typography typography__big">
+          Join us and start creating jokes!
+        </h1>
+
         <button
           onClick={() => signIn()}
-          class="pill pill--medium  pill__action typography typography--pill typography--link"
+          class="pill pill--medium  google-login-button typography typography--pill typography--link"
         >
           Log In with Google!
         </button>
