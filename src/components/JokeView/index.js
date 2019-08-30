@@ -20,7 +20,7 @@ function JokeView({ id }) {
   }
 
   return (
-    <React.Fragment>
+    <div class="single-joke__container">
       <div class="single-joke__joke-card card card--box">
         <div class="card__header">
           {joke.categories.map(id => <Tag key={id} id={id} />)}
@@ -77,7 +77,7 @@ function JokeView({ id }) {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 
