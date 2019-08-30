@@ -13,7 +13,7 @@ function Login() {
 
   return (
     <main class="container">
-      <div class="login">
+      <div class="message-block">
         <h1 class="typography typography__big">
           Join us and start creating jokes!
         </h1>

@@ -29,36 +29,30 @@ function Menu() {
                 LOG IN
               </Link>
             : <div class="menu--nav--dropdown">
-                <div
-                  class="typography typography--nav menu--nav--dropdown--label"
-                  to="/signup"
-                >
+                <div class="typography typography--nav menu--nav--dropdown--label">
                   MEIN BEREICH
                 </div>
                 <div class="menu--nav--dropdown--links">
                   <Link
                     class="typography typography--nav--sublink"
-                    to="jokes/mine"
+                    to="/jokes/mine"
                   >
                     My published jokes
                   </Link>
 
                   <Link
                     class="typography typography--nav--sublink"
-                    to="/signup"
+                    to="/jokes/saved"
                   >
                     My saved jokes
                   </Link>
 
-                  <Link
-                    class="typography typography--nav--sublink"
-                    to="jokes/saved"
-                  >
+                  <Link class="typography typography--nav--sublink" to="/me">
                     Account Information
                   </Link>
 
                   <Link
-                    class="typography typography--nav--sublink"
+                    class="typography typography--nav--sublink typography--nav--sublink__highligh  typography--bold"
                     to="jokes/new"
                   >
                     Publish new joke

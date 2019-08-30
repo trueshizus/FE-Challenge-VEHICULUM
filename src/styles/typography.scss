@@ -11,6 +11,7 @@ $font-size-big: 48px;
 
 // Weight
 $semi-bold: 600;
+$bold: 800;
 
 .typography {
   font-family: $font-main;
@@ -68,6 +69,11 @@ $semi-bold: 600;
   color: $color-link-secondary;
   font-size: $font-size-link;
   text-decoration: none;
+}
+
+.typography--nav--sublink__highligh {
+  color: $color-link;
+  font-weight: $bold;
 }
 
 .typography--search--result {
