@@ -139,6 +139,10 @@ $input-search-heigth: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
 }
 
 .single-joke__actions__votes {
