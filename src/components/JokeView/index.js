@@ -5,7 +5,6 @@ import useFirebaseDocument from "../../firebase/useFirebaseDocument";
 import { navigate } from "@reach/router";
 
 function JokeView({ id }) {
-  const title = "";
   const [joke, isLoading, updateJoke] = useFirebaseDocument("jokes", id);
 
   const changePage = pageNumber => {
@@ -15,29 +14,29 @@ function JokeView({ id }) {
     navigate(`/jokes/${pageNumber}`);
   };
 
-  if (isLoading) {
-    return <Loading> Loading joke...</Loading>;
-  }
-
   return (
     <div class="single-joke__container">
       <div class="single-joke__joke-card card card--box">
-        <div class="card__header">
-          {joke.categories.map(id => <Tag key={id} id={id} />)}
-          <h4 class="typography typography--trending typography__semi-bold bullet-small-rigth">
-            Trending
-          </h4>
-        </div>
-        <div class="card__big-title">
-          <h3 class="typography typography__semi-bold typography--big-title">
-            {title}
-          </h3>
-          <div class="card__big-title__divider" />
-          <h6> NO #1</h6>
-        </div>
-        <p class="card__content typography">
-          {joke.value}
-        </p>
+        {isLoading
+          ? <span> Loading joke...</span>
+          : <React.Fragment>
+              <div class="card__header">
+                {joke.categories.map(id => <Tag key={id} id={id} />)}
+                <h4 class="typography typography--trending typography__semi-bold bullet-small-rigth">
+                  Trending
+                </h4>
+              </div>
+              <div class="card__big-title">
+                <h3 class="typography typography__semi-bold typography--big-title">
+                  {joke.value.split(" ").slice(0, 2).join(" ")}
+                </h3>
+                <div class="card__big-title__divider" />
+                <h6> NO #1</h6>
+              </div>
+              <p class="card__content typography">
+                {joke.value}
+              </p>
+            </React.Fragment>}
       </div>
 
       <div class="single-joke__actions">
