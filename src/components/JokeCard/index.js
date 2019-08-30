@@ -8,7 +8,7 @@ function Joke(props) {
 
   return (
     <div class="card card--box">
-      <h3 class="card__title typography typography__semi-bold">
+      <h3 class="card__title typography typography__semi-bold bolt-icon">
         {title}
       </h3>
       <p class="card__content typography">

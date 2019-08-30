@@ -14,8 +14,13 @@ function useFirebaseDocument(collectionName, documentId) {
   useEffect(
     () => {
       const getDocument = async () => {
+        let doc;
         setIsLoading(true);
-        const doc = await database[collectionName].get(documentId);
+        if (documentId) {
+          doc = await database[collectionName].get(documentId);
+        } else {
+          doc = {};
+        }
         setDocument(doc);
         setIsLoading(false);
       };

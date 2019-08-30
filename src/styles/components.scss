@@ -12,24 +12,6 @@ $input-search-heigth: 48px;
   border: $input-border;
 }
 
-.input--search {
-  width: 100%;
-  max-width: $input-search-width;
-  height: $input-search-heigth;
-  padding-left: 15px;
-  padding-right: 40px;
-  margin: 50px 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 95% center;
-  background-image: url("./assets/search-icon-ligth.png");
-
-  &:focus {
-    background-color: $color-ligth;
-    background-image: url("./assets/search-icon-dark.png");
-  }
-}
-
 /* Pill */
 .pill {
   border-radius: 2px;
@@ -97,17 +79,6 @@ $input-search-heigth: 48px;
   font-size: 16px;
   text-transform: uppercase;
   position: relative;
-
-  &:before {
-    content: " ";
-    display: inline-block;
-    width: 8px;
-    height: 14px;
-    margin-right: 5px;
-    background-image: url("./assets/ligthing-bolt.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 }
 
 .card__content {
@@ -323,4 +294,72 @@ $input-search-heigth: 48px;
   background-color: $cinnabar;
   color: $color-ligth;
   border: none;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  margin: 50px auto;
+  max-width: $input-search-width;
+}
+
+.search--results {
+  width: 100%;
+  z-index: 1;
+  background-color: $color-ligth;
+  position: absolute;
+  margin-top: 16px;
+  box-sizing: border-box;
+  padding: 0 15px;
+
+  &:before {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+  }
+}
+
+.search--results--result {
+  display: block;
+  border-bottom: solid 1px $color-soft;
+  &:last-child {
+    border: none;
+  }
+}
+
+.input--search {
+  width: 100%;
+
+  padding-left: 15px;
+  padding-right: 40px;
+  height: $input-search-heigth;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-image: url("./assets/search-icon-ligth.png");
+
+  &:focus {
+    background-color: $color-ligth;
+    background-image: url("./assets/search-icon-dark.png");
+  }
+}
+
+.bolt-icon {
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin-right: 5px;
+    background-image: url("./assets/ligthing-bolt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

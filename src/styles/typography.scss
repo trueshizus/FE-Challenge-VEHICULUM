@@ -70,6 +70,13 @@ $semi-bold: 600;
   text-decoration: none;
 }
 
+.typography--search--result {
+  text-decoration: none;
+  color: $color-search-result;
+  line-height: 45px;
+  text-align: left;
+}
+
 .typography--footer {
   color: $color-ligth;
   font-size: $font-size-regular;
