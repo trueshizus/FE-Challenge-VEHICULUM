@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import JokePage from "./components/JokePage";
+import JokeView from "./components/JokeView";
 import CreateJoke from "./components/CreateJoke";
 import MyPublishedJokes from "./components/MyPublishedJokes";
 import MySavedJokes from "./components/MySavedJokes";
@@ -23,7 +24,9 @@ function App(props) {
       <Header />
       <Router>
         <Home path="/" />
-        <JokePage path="jokes/:jokeId" />
+        <JokePage path="jokes">
+          <JokeView path=":id" />
+        </JokePage>
         <CreateJoke path="jokes/new" />
         <MyPublishedJokes path="jokes/mine" />
         <MySavedJokes path="jokes/saved" />
