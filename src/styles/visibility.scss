@@ -11,3 +11,17 @@
     display: none;
   }
 }
+
+.hide-medium {
+  display: inherit;
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
+}
+
+.show-medium {
+  display: none;
+  @media screen and (max-width: 840px) {
+    display: inherit;
+  }
+}

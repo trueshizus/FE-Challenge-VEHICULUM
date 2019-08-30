@@ -15,7 +15,20 @@ function Menu() {
         <Link to="/">
           <Logo style={{ height: "60px" }} />
         </Link>
-        <div class="menu--nav--links">
+        <div class="menu--nav--links show-medium">
+          {currentUser
+            ? <a
+                class="typography typography--nav"
+                onClick={() => auth.signOut()}
+                href="/#"
+              >
+                LOG OUT
+              </a>
+            : <Link class="typography typography--nav" to="/login">
+                LOG IN
+              </Link>}
+        </div>
+        <div class="menu--nav--links hide-medium">
           <Link class="typography typography--nav" to="/">
             SO FUNKTIONIERT’S
           </Link>
