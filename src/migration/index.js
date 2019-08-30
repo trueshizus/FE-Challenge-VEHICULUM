@@ -44,14 +44,14 @@ async function migrateData() {
     }));
 
     return await Promise.all(
-      jokes.result.map(joke => {
+      jokes.result.map((joke, index) => {
         // Retrives the list of categories ID's for joke
         const jokeCategories = categories
           .filter(category => joke.categories.includes(category.label))
           .map(({ id }) => id);
 
         // Creates the joke in the database
-        return db.collection("jokes").add({
+        return db.collection("jokes").doc((index + 1).toString()).set({
           ...joke,
           categories: jokeCategories,
           upvotes: 0,
@@ -62,6 +62,9 @@ async function migrateData() {
     );
   }
 
-  await migrateCategories();
+  //  await migrateCategories();
   await migrateJokes();
 }
+
+console.log("migrating data...");
+migrateData();
